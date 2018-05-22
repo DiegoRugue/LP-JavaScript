@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Exercicio 3</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+
+			function calcula() {
+			//Declaração de Variaveis
+				var idade,i,cont1=0,cont2=0,cont3=0,cont4=0,cont5=0;
+			//Entrada/Processamento
+				for (i = 0; i < 8; i++) {
+					idade = parseInt(prompt("Informe a idade"));
+
+					if (idade <= 15){
+						cont1 ++;
+					} 
+					if ((idade > 16) && (idade <= 30)) {
+							cont2 ++;
+					}
+					if ((idade > 31) && (idade <= 45)) {
+							cont3 ++;
+					}
+					if ((idade > 46) && (idade <= 60)) {
+							cont4 ++;
+					}
+					if (idade > 60) {
+							cont5 ++;
+					}
+
+				}
+			//Saidas
+				document.getElementById("saida1").innerHTML = cont1 + " pessoas";
+				document.getElementById("saida2").innerHTML = cont2 + " pessoas";
+				document.getElementById("saida3").innerHTML = cont3 + " pessoas";
+				document.getElementById("saida4").innerHTML = cont4 + " pessoas";
+				document.getElementById("saida5").innerHTML = cont5 + " pessoas";
+				document.getElementById("saida6").innerHTML = (cont1 / 8) * 100 + " %";
+				document.getElementById("saida7").innerHTML = (cont5 / 8) * 100 + " %";
+
+		}
+			
+		</script>
+
+	</head>
+
+	<body>
+		<div style="text-align: center;">
+			<h1>Tabela Faixa Etária</h1>
+			<table border="1px black", align="center">
+				<tr>
+					<td>1° Faxa Etária</td>
+					<td>2° Faxa Etária</td>
+					<td>3° Faxa Etária</td>
+					<td>4° Faxa Etária</td>
+					<td>5° Faxa Etária</td>
+					<td>Porcentagem de pessoas na 1° faixa etaria</td>
+					<td>Porcentagem de pessoas na 5° faixa etaria</td>
+				</tr>
+				<tr>
+					<td id="saida1"> </td>
+					<td id="saida2"> </td>
+					<td id="saida3"> </td>
+					<td id="saida4"> </td>
+					<td id="saida5"> </td>
+					<td id="saida6"> </td>
+					<td id="saida7"> </td>
+
+				</tr>
+
+			</table>
+
+			<p>
+				<button onclick="calcula()">
+					Gerar Tabela
+				</button>
+			</p>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Exemplo CRUD com vetor</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			var vetor = new Array ();
+
+			function insere() {
+				do {
+					var numero = parseInt(prompt("Informe um numero" + "\n" + "Digite 0 para parar"));
+					vetor.push(numero);
+				} 
+				while (numero != 0);
+
+				var vetorpop = vetor.pop();
+
+				}
+
+			function consulta(){
+				var saida=0;
+				for (var i = 0; i < vetor.length; i++){
+					saida = saida + vetor[i] + "\n";
+				}
+				alert(saida);
+			}
+
+			function remove(){
+				var posicao=0,numero,i;
+				numero = parseInt(prompt("Qual numero deseja remover?"));
+				for (i = 0; i < vetor.length; i++) {
+					if (vetor[i] == numero) {
+						posicao = i;
+						break;
+					}
+				}
+
+				if (i == vetor.length) {
+					alert("Elemento não encontrado");
+				}
+				else {
+					vetor.splice(posicao, 1);
+					alert("Elemento removido com sucesso");
+				}
+			}
+
+			function atualiza(){
+
+				var posicao=0,i,numero,novo;
+				numero = parseInt(prompt("Informe um numero"));
+				posicao = vetor.indexOf(numero);
+				if (posicao == -1) {
+					alert("Elemento não encontrado");
+				}
+
+				else {
+					novo = parseInt(prompt("Informe o novo numero"));
+					vetor[posicao] = novo;
+					alert("Elemento " + numero + " alterado para " + novo);
+				}
+				
+
+
+
+			}
+			
+		</script>
+
+	</head>
+
+	<body>
+
+		<p>
+			<button onclick="insere()"> Insere elementos </button>
+		</p>
+
+		<p>
+			<button onclick="consulta()"> Consulta elementos </button>
+		</p>
+
+		<p>
+			<button onclick="remove()"> Remove elementos </button>
+		</p>
+
+		<p>
+			<button onclick="atualiza()"> Atualiza elementos </button>
+		</p>
+
+	</body>
+
+</html>

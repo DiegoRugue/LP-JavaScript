@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Exercicio 2</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+
+			function tabela(){
+				var preco,aux = "<table width = 30%  border = '1'>";
+				var ingressos = 120;
+				for (preco=5; preco>=1; preco=preco-0.50) {
+					aux = aux + "<tr>";
+					aux = aux + "<td align= center>" + preco + "</td>";
+					aux = aux + "<td>" + ingressos + "</td>";
+					aux = aux + "<td> 200 </td>";
+					ingressos = ingressos + 26;
+					aux = aux + "</tr>";
+				}
+				aux = aux + "</table>";
+				document.getElementById ("saida").innerHTML= aux
+			}
+
+		</script>
+
+	</head>
+		<div style="">
+	<body>
+
+		<h1>Compania de Teatro</h1>
+
+		<button onclick="tabela()">
+			Calcular tabela
+		</button>
+
+		<p id="saida"></p>
+	</body>
+
+</html>

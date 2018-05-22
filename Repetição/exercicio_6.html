@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title> compras </title>
+		<script type="text/javascript">
+			function compras (){
+				var valor; var totalvista = 0, totalprazo = 0,total,parcela;
+				var tipo;
+
+
+
+				for (i=0;i<3;i++){
+					valor = parseFloat (prompt("Informe o valor da compra"));
+					do {
+						tipo = prompt ("Informe V para compra a vista e P para compra a prazo");
+						tipo = tipo.toUpperCase(); // converte pra maiusculo
+					}
+					while ((tipo != "V") && ( tipo != "P"));
+					if (tipo == "V"){
+						totalvista = totalvista + valor;
+					}
+					else {
+						totalprazo = totalprazo + valor;
+					}
+				}
+				total = totalvista + totalprazo;
+
+				parcela = totalprazo / 3 ;
+
+				document.getElementById ("totalvista").innerHTML = "Total a vista: " + totalvista.toFixed(2);
+				document.getElementById ("totalprazo").innerHTML = "Total a prazo: " + totalprazo.toFixed(2);
+				document.getElementById ("total").innerHTML = "Total: " + total.toFixed(2);
+				document.getElementById ("parcela").innerHTML = "Parcela: " +  parcela.toFixed(2);
+
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<hl> Compras </hl>
+		<p>
+			<button onclick = "compras()"> Calcula total de compras </button>
+		</p>
+		<p id="totalvista">
+		</p>	
+		<p id = "totalprazo">
+		</p>
+		<p id ="total">
+		</p>
+		<p id = "parcela" >
+		</p>
+	</body>
+</html>	

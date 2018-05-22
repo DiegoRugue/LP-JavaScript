@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<title>Exercicio 5</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			.estilo {
+				width: 150px;
+				height: 50px;
+				padding: 10px;
+				background: #BDBDBD;
+				text-align: center;
+				margin: 20px auto;
+			}
+
+			#relativo {
+				position: relative;
+				margin: -20px;
+				background: #2E64FE;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+
+			function tabuada(){
+				var i,j,total;
+				for(i=1;i<=10;i++) {
+					for (j=0;j<=10;j++) {
+						total = i * j;
+						console.log(i + " x " + j + " = " + total)
+					}
+				}
+		}
+
+		</script>
+
+	</head>
+
+	<body>
+		<div class="estilo">
+			<div id="relativo">
+				<h1 style="margin: 0;">Tabuada</h1>
+			</div>
+			<p>
+				<button style="margin-top: 20px; " onclick="tabuada()">
+					Calcular
+				</button>
+			</p>
+		</div>
+
+	</body>
+
+</html>

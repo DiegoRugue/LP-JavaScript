@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title> Exercicio 11 </title>
+		<script type="text/javascript">
+			function exe11(){
+				var numeros = new Array ();
+				var pares = new Array ();
+				var impares = new Array ();
+
+				for (var i =0 ; i<10; i++){
+					numeros.push (parseInt(prompt("Informe o numero")));
+
+				}
+				for (var i = 0; i <10 ; i++){
+					if (numeros[i] % 2 == 0){
+						pares.push(numeros[i]);
+					}
+					else {
+						impares.push(numeros[i]);
+					}
+				}
+					alert ("Numeros pares: " + pares);
+					alert ("Numeros impares: " + impares);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick = "exe11()">
+			calcula
+		</button>
+	</body>
+</html>				

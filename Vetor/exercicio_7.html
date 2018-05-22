@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title> Exercicio 7 </title>
+		<script type="text/javascript">
+			function exe8 () {
+				var numeros = new Array ();
+				var negativo = 0 ;
+				var positivo = 0 ;
+				for (var i = 0 ; i<10 ; i++){
+					numeros.push(parseFloat(prompt("Informe um numero real")));
+
+				}
+				for (var i = 0; i <10; i++){
+					if (numeros[i] >0 ) {
+						positivo = positivo + numeros[i];
+					}	
+					else{
+						negativo ++;
+					}
+				}			
+				alert ("Soma dos numeros positivos: " + positivo);
+				alert ("Quantidade de numeros negativos: " + negativo);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick = "exe8()">
+			calcula
+		</button>
+	</body>
+</html>				

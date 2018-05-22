@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<title>Exercicio 8</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function recebe(){
+				var idade, peso, altura, corolho, corbelo, cont1=0, azul=0, ruivo, media, porcolho, conti=0, cont2=0;
+
+				for (var i = 0; i < 3; i++) {
+					idade = parseInt(prompt("Informe a idade"));
+					peso = parseFloat(prompt("Informe o peso"));
+					altura = parseFloat(prompt("Informe a altura"));
+					corolho = prompt("Informe a cor dos olhos | A | Para azul, | P | para preto, | V | para verde, | C | para castanho");
+					corbelo = prompt("Informe a cor dos cabelos | P | para preto, | C | para castanho, | L | para loiro, | R | para ruivo");
+
+					if (idade > 50 && peso < 60) {
+						cont1 ++;
+					}
+
+					if (altura < 1.50) {
+						conti = conti + idade;
+						cont2 ++;
+					}
+
+					if (corolho == "A") {
+						azul ++;
+					}
+
+					if ((corbelo == "R") && (corolho != "A"))  {
+						ruivo ++;
+					}
+
+				}
+
+				media = (conti / cont2);
+				porcolho = (corolho / 3) * 100;
+
+				document.getElementById("saida1").innerHTML = " Quantidade de pessoas idade superior a 50 anos e peso inferior a 60kg " + cont1;
+				document.getElementById("saida2").innerHTML = " Media das idades das pessoas com altura inferior a 1.50 " + media;
+				document.getElementById("saida3").innerHTML = " Porcentagem de pessoas com olhos azuis " + porcolho;
+				document.getElementById("saida4").innerHTML = " Quantidade de pessoas ruivas que nao possuem olhos azuis " + ruivo;
+
+			}
+
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<h1>Exercicio 8 </h1>
+		<button onclick="recebe()">
+			Calcular
+		</button>
+		<p id="saida1"></p>
+		<p id="saida2"></p>
+		<p id="saida3"></p>
+		<p id="saida4"></p>
+
+	</body>
+
+</html>

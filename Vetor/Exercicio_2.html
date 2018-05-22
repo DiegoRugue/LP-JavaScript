@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Exercicio 2</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function exe2(){
+				var vetor1 = new Array();
+				var vetor2 = new Array();
+				var vetor3 = new Array();
+				var vetor4 = new Array();
+				var i;
+
+				//Entrada
+				for (i = 0; i < 7; i ++) {
+					vetor1.push(parseInt(prompt("Informe um numero")));
+				}
+
+				//Processamento
+				for(i = 0; i < 7; i++){
+					if ((vetor1[i] % 2 == 0) && (vetor1[i] % 3 == 0)){
+						vetor4.push(vetor1[i]);
+					}
+					else if (vetor1[i] % 2 == 0){
+						vetor2.push(vetor1[i]);
+					}
+					else if (vetor1[i] % 3 == 0){
+						vetor3.push(vetor1[i]);
+					}
+				}
+				document.getElementById("saida1").innerHTML = "Numeros digitados: " + vetor1;
+				document.getElementById("saida2").innerHTML = "Numeros multiplos de 2: " + vetor2;
+				document.getElementById("saida3").innerHTML = "Numeros multiplos de 3: " + vetor3;
+				document.getElementById("saida4").innerHTML = "Numeros multiplos de 2 e 3: " + vetor4;
+				
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<button onclick="exe2()">
+			Calcula
+		</button>
+
+		<p id="saida1"></p>
+		<p id="saida2"></p>
+		<p id="saida3"></p>
+		<p id="saida4"></p>
+
+	</body>
+
+</html>

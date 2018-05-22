@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Exercicio 1</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function exe1(){
+
+			    var numeros = new Array();
+			    var pares = new Array();
+			    var impares = new Array();
+			    // entrada de dados
+			    for(var i = 0; i < 6; i++){
+			        numeros.push(parseInt(prompt("Informe um numero")));
+			    }
+			    // processamento
+			    for(var i = 0; i < 6; i++){
+			        if (numeros[i] % 2 == 0) {
+			            pares.push(numeros[i]);
+			        }
+			        else {
+			            impares.push(numeros[i]);
+			        }
+			    }
+			    //saida
+			    alert("Qtde de pares " + pares.length + " elementos: " + pares);
+			    alert("Qtde de impares " + impares.length + " elementos: " + impares);
+
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<button onclick="exe1()">
+			Calcula
+		</button>
+
+	</body>
+
+</html>

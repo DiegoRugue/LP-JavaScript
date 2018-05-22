@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercicio 8</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function calcula () {
+				var nomes = new Array();
+				var medias = new Array();
+				var maior=0; 
+				var maiornome,x;
+
+				for (var i = 0; i < 10; i++) {
+					nomes.push(prompt("Nome do aluno "));
+					medias.push(parseFloat(prompt("Media do aluno " + nomes[i])));
+
+					if (medias[i] > maior) {
+						maior = medias[i];
+						maiornome = nomes[i];
+					}
+
+					if (medias[i] < 7) {
+						x = 7 - medias[i];
+						alert("Aluno " + nomes[i] + " precisa tirar no exame final " + x);
+					}
+
+				}
+
+				document.getElementById("saida").innerHTML = "Aluno " + maiornome + " teve a maior media";
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<button onclick="calcula()">
+			Calcular
+		</button>
+
+		<p id="saida"></p>
+
+
+	</body>
+</html>

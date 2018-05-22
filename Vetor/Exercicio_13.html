@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercicio 8</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function calcula () {
+				var nomes = new Array();
+				var medias = new Array();
+				var media=0; 
+
+				for (var i = 0; i < 5; i++) {
+					nomes.push(prompt("Nome do aluno "));
+					medias.push(parseFloat(prompt("Media do aluno " + nomes[i])));
+
+					media = media + medias[i];
+				}
+				
+				alert("A media da sala foi " + (media / 5));
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<button onclick="calcula()">
+			Calcular
+		</button>
+	</body>
+</html>

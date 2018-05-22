@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercicio 5</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function calcula(){
+			    var logica = new Array(); 
+			    var programacao = new Array();
+			    var interseccao = new Array();
+				// entrada de dados
+			    for(var i = 0; i < 10; i++){
+			        logica.push(parseInt(prompt("Informe matricula na disciplina de Logica")));
+			    }
+			    for(var i = 0; i < 5; i++){
+			        programacao.push(parseInt(prompt("Informe matricula na disciplina de Programação")));
+			    }
+			    // processamento
+			    for(var i = 0; i < 10; i++){
+			        for(var j=0;j<5;j++){
+			            if (logica[i] == programacao[j]){
+			                interseccao.push(logica[i]);
+			            }
+			        }
+    			}
+			    //saida
+			    alert("Intersecção " + interseccao);
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<button onclick="calcula()">
+			Calcular
+		</button>
+
+	</body>
+</html>

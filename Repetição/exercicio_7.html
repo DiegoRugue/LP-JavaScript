@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Exercicio 7</title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+
+			function calcula() {
+				//Declaração de Variaveis
+					var idade,altura,peso,calculai=0,contadori=0,acumuladori=0,media,contadorp=0,porcentagem;
+
+				//Entrada
+					for (var i = 0; i < 3; i++) {
+						idade = parseInt(prompt("Informe a idade"));
+						altura = parseFloat(prompt("Informe a altura"));
+						peso = parseFloat(prompt("Informe o peso"));
+
+						if (idade >= 50) {
+
+							calculai = calculai + 1;
+						}
+
+						if ((idade >= 10) && (idade <= 20)) {
+
+							contadori = contadori + 1;
+							acumuladori = acumuladori + altura;
+						}
+
+						if (peso <= 40) {
+
+							contadorp = contadorp + 1;
+						}
+
+					}
+						media = acumuladori / contadori;
+						porcentagem = contadorp / 3 * 100;
+					document.getElementById("saida1").innerHTML = "Pessoas com idade maior ou igual 50 anos " + calculai;
+					document.getElementById("saida2").innerHTML = "Media da altura das pessoas com idade entre 10 e 20 anos " + media;
+					document.getElementById("saida3").innerHTML = "Porcentagem do peso das pessoas com peso inferior a 40kilos " + porcentagem;
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<h1>Exercicio 7</h1>
+
+		<button onclick="calcula()">
+			Calcular
+		</button>
+
+		<p id="saida1"></p>
+		<p id="saida2"></p>
+		<p id="saida3"></p>
+
+	</body>
+
+</html>
